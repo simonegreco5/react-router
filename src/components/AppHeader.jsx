@@ -11,8 +11,9 @@ export default function AppHeader() {
             <nav className="d-flex justify-content-between">
 
                 <div className="d-flex">
-                    <h3>BOOLEAN SHOP</h3>
-                    <i class="bi bi-box-seam"></i>
+                    <i className="bi bi-tux"></i>
+                    <h3>BOOLEAN SHOPPIng</h3>
+                    {/* <i class="bi bi-box-seam-fill"></i> */}
                 </div>
 
                 <ul className="d-flex">
