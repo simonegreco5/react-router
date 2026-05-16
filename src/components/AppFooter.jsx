@@ -3,32 +3,32 @@ export default function AppFooter(){
     return (
         <footer className="bg-body-tertiary">
             <div>
-                <h3>INFO</h3>
+                <h4>INFO</h4>
                 <ul>
-                    <li><a href="/boolean-flight">Boolean Flight</a></li>
-                    <li><a href="/contactss">Contact Us</a></li>
-                    <li><a href="/privacy-policy">Privacy Policy</a></li>
-                    <li><a href="/terms-of-service">Terms of Service</a></li>
+                    <li><a href="">Boolean Flight</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Privacy Policy</a></li>
+                    <li><a href="">Terms of Service</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3>CUSTOMER SUPPORT</h3>
+                <h4>CUSTOMER SUPPORT</h4>
                 <ul>
-                    <li><a href="/boolean-flight">booleansupport@boolean.com</a></li>
-                    <li><a href="/contactss">Mon-Sat 8.00AM-6.00PM</a></li>
-                    <li><a href="/privacy-policy">FAQ</a></li>
-                    <li><a href="/terms-of-service">Cancellations & Refunds</a></li>
+                    <li><a href="">booleansupport@boolean.com</a></li>
+                    <li><a href="">Mon-Sat 8.00AM-6.00PM</a></li>
+                    <li><a href="">Questions with Rufus</a></li>
+                    <li><a href="">Cancellations & Refunds</a></li>
                 </ul>
             </div>
 
             <div>
-                <h3>PAYMENTS</h3>
+                <h4>PAYMENTS</h4>
                 <ul>
-                    <li><a href="/boolean-flight">Visa, Mastercard, Amex</a></li>
-                    <li><a href="/contactss">Klarna, pay in installments</a></li>
-                    <li><a href="/privacy-policy">PayPal, other methods</a></li>
-                    <li><a href="/terms-of-service">Secure Payments with SecureCheck</a></li>
+                    <li><a href="">Visa, Mastercard, Amex</a></li>
+                    <li><a href="">Klarna, pay in installments</a></li>
+                    <li><a href="">PayPal, other methods</a></li>
+                    <li><a href="">Secure Payments with SecureCheck</a></li>
                 </ul>
             </div>
         </footer>

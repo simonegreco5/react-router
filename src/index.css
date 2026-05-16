@@ -1,33 +1,38 @@
-h1, h2, h3 {
-    font-family: 'Bebas Neue', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Bebas Neue', sans-serif;
 }
 
 body {
   font-family: 'Open Sans Variable', sans-serif;
 }
 
-header{
+header {
   padding: 1.4rem;
 
-  div{
+  div {
     padding-left: 1rem;
     align-items: center;
-    i{
+
+    i {
       font-size: 1.5rem;
       transform: rotate(45deg);
     }
   }
 
-  ul{
+  ul {
 
     padding-top: 0.5rem;
     padding-right: 1rem;
 
-    li{
+    li {
       padding-left: 2rem;
       list-style: none;
-  
-      a{
+
+      a {
         color: black;
         text-decoration: none;
         font-weight: 600;
@@ -36,4 +41,30 @@ header{
   }
 
 
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+
+  div {
+    padding: 1.5rem;
+    margin: auto;
+
+    h4{
+      padding-left: 2rem;
+    }
+
+    li {
+      list-style: none;
+
+
+
+      a {
+        color: rgba(0, 0, 0, 0.472);
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
 }

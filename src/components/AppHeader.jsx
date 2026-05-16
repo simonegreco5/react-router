@@ -1,4 +1,5 @@
 // sezione import
+import { NavLink } from "react-router-dom";
 import menu from "../assets/arrayMenu.js";
 
 export default function AppHeader() {
@@ -10,15 +11,15 @@ export default function AppHeader() {
             <nav className="d-flex justify-content-between">
 
                 <div className="d-flex">
-                    <h3>BOOLEAN FLIGHT</h3>
-                    <i className="bi bi-airplane"></i>
+                    <h3>BOOLEAN SHOP</h3>
+                    <i class="bi bi-box-seam"></i>
                 </div>
 
                 <ul className="d-flex">
                     {
                         menu.map((item) => (
                             <li key={item.id}>
-                                <a href={item.url}>{item.nome}</a>
+                                <NavLink to={item.url}>{item.nome}</NavLink>
                             </li>
                         ))
                     }
