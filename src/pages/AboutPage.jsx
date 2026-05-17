@@ -3,7 +3,7 @@ export default function AboutPage() {
     return (
 
         <main>
-            <div id="about_main" className="p-5 mb-4 text-white rounded-3">
+            <div id="about_main" className="p-5 mb-4 bg-body-tertiary rounded-3">
 
                 <div className="container-fluid py-5">
                     <h1 className="display-5 fw-bold">ABOUT US</h1>

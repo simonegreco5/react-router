@@ -7,12 +7,15 @@ export default function ProductsPage() {
     const api_products = 'https://fakestoreapi.com/products'
 
     const [productsData, setProductsData] = useState([])
+    const [filteredProduct, setFilteredProduct] = useState ([])
+    const [filter, setFilter] = useState("")
 
     function fetchData(url) {
         fetch(url)
             .then(response => response.json())
             .then(data => {
                 setProductsData(data)
+                setFilteredProduct(data) 
             })
     }
 
@@ -21,11 +24,35 @@ export default function ProductsPage() {
         fetchData(api_products)
     }, [])
 
+    useEffect(() => {
+
+        if (filter) {
+           const result = productsData.filter((product) => (product.category.toLowerCase() === filter.toLowerCase()))
+
+           setFilteredProduct(result)
+
+        } else {
+            setFilteredProduct(productsData)
+        }
+
+    }, [filter, productsData])
+
     return (
         <main>
+
+            {/* filtraggio dei prodotti */}
+            <h5>choose by filter</h5>
+            <select onChange={(e) => setFilter(e.target.value)} className="form-select">
+                <option value="">All</option>
+                <option value="men's clothing">Men's clothing</option>
+                <option value="women's clothing">Women's clothing</option>
+                <option value="jewelery">Jewelery</option>
+                <option value="electronics">Electronics</option>
+            </select>
+
             <div className="row g-5-p-5">
                 {
-                    productsData?.map((item) => (
+                    filteredProduct?.map((item) => (
 
                         // CARD PRODUCT
                         <div className="col-12 col-sm-6 col-md-4 g-5" key={item.id}>

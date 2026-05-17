@@ -12,7 +12,7 @@ body {
 }
 
 header {
-  background-color: rgb(6, 173, 224);
+  background-color: rgb(8, 117, 235);
   padding: 1.4rem;
   color: black;
 
@@ -21,7 +21,10 @@ header {
     align-items: center;
 
     h3 {
-      color: rgb(8, 117, 235);
+      /* color: rgb(8, 117, 235); */
+      color: white;
+      font-size: 1.9rem;
+      padding-top: 0.6rem;
     }
 
     .bi-tux {
@@ -54,7 +57,7 @@ header {
       a.active::after {
         content: "";
         display: block;
-        border-bottom: 2px solid rgb(8, 117, 235);
+        border-bottom: 2px solid white;
         width: 100%;
       }
     }
@@ -107,14 +110,17 @@ main {
     position: relative;
   }
 
-  #about_main{
-   background-color: rgba(8, 118, 235, 0.684);
+  #about_main {
+
+    h1, h2{
+      color: rgb(8, 117, 235);
+    }
   }
 
   .button-home {
     border-radius: 1rem;
   }
-  
+
   .logo_tux {
 
     i {

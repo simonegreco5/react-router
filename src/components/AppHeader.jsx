@@ -6,13 +6,13 @@ export default function AppHeader() {
 
     return (
 
-        <header className="bg-body-tertiary">
+        <header className="">
 
             <nav className="d-flex justify-content-between">
 
                 <div className="d-flex">
                     <i className="bi bi-tux"></i>
-                    <h3>BOOLEAN SHOPPIng</h3>
+                    <h3>BOOLEAN SHOPPING</h3>
                     {/* <i className="bi bi-box-seam-fill"></i> */}
                 </div>
 
