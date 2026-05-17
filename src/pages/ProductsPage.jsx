@@ -6,8 +6,8 @@ export default function ProductsPage() {
     // chiamata API 
     const api_products = 'https://fakestoreapi.com/products'
 
-    const [productsData, setProductsData] = useState([])
-    const [filteredProduct, setFilteredProduct] = useState ([])
+    const [productsData, setProductsData] = useState([]) // questo state rimane solo per l'API (questo rimane intatto)
+    const [filteredProduct, setFilteredProduct] = useState ([]) // secondo state per i prodotti filtrati (filtriamo solo questo)
     const [filter, setFilter] = useState("")
 
     function fetchData(url) {
@@ -31,11 +31,12 @@ export default function ProductsPage() {
 
            setFilteredProduct(result)
 
-        } else {
-            setFilteredProduct(productsData)
+        } else {  // invece, quando filter === ""(ovvero all), if(filter) diventa false,
+            setFilteredProduct(productsData) // quindi mostriamo i dati originali dell'API (tutti i prodotti)
         }
 
-    }, [filter, productsData])
+    }, [filter, productsData]) // aggiungiamo productsData come dipendeza, cosi il filtro si aggiorna anche quando arrivano
+                               // nuovi dati dall'API
 
     return (
         <main>
