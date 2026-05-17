@@ -13,7 +13,7 @@ export default function AppHeader() {
                 <div className="d-flex">
                     <i className="bi bi-tux"></i>
                     <h3>BOOLEAN SHOPPIng</h3>
-                    {/* <i class="bi bi-box-seam-fill"></i> */}
+                    {/* <i className="bi bi-box-seam-fill"></i> */}
                 </div>
 
                 <ul className="d-flex">

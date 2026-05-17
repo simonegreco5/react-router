@@ -107,6 +107,10 @@ main {
     position: relative;
   }
 
+  #about_main{
+   background-color: rgba(8, 118, 235, 0.684);
+  }
+
   .button-home {
     border-radius: 1rem;
   }
