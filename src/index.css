@@ -15,6 +15,11 @@ header {
   background-color: rgb(8, 117, 235);
   padding: 1.4rem;
   color: black;
+  /* header sempre visibile durante lo scorrimento */
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
 
   div {
     padding-left: 1rem;
@@ -96,6 +101,9 @@ footer {
 
 main {
   padding: 5rem;
+  /* siccome rendiamo header sempre visibile con z-index,
+  diamo un po di padding-top, altrimenti il main parte sotto l'header */
+  padding-top: 10rem;
 
   #title_jumbotron {
 
@@ -112,8 +120,40 @@ main {
 
   #about_main {
 
-    h1, h2{
+    h1,
+    h2 {
       color: rgb(8, 117, 235);
+    }
+  }
+
+  #products_main {
+    position: relative;
+
+  }
+
+  .dinamic-cart {
+    position: sticky;
+    top: 80%;
+    left: 92%;
+    font-size: 2.5rem;
+    z-index: 999;
+    background-color: rgba(8, 118, 235, 0.669);
+    padding: 0.5rem;
+    width: 4rem;
+    border: none;
+    border-radius: 1rem;
+
+    span {
+      position: absolute;
+      display: block;
+      font-size: 16px;
+      padding: 0.3rem;
+      background-color: rgb(216, 10, 10);
+      border-radius: 1rem;
+      width: 2rem;
+      color: white;
+      top: -15%;
+      left: 65%;
     }
   }
 
