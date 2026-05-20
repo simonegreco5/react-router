@@ -1,5 +1,5 @@
 // sezione import
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
 
@@ -24,9 +24,9 @@ export default function HomePage() {
                     </p>
 
                     {/* link per products */}
-                    <NavLink to={"/products"} className="btn btn-primary btn-lg button-home">
+                    <Link to={"/products"} className="btn btn-primary btn-lg button-home">
                         Check our Products
-                    </NavLink>
+                    </Link>
                 </div>
             </div>
         </main>

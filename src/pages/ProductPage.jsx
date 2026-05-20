@@ -15,6 +15,8 @@ export default function ProductPage() {
             .then(data => setProduct(data))
             .catch(err => {
                 console.error(err)
+                console.log('user search does not exist');
+                navigate('/not-found')
             })
     }, [id, navigate])
 

@@ -131,10 +131,14 @@ main {
 
   }
 
-  #product_page{
+  #product_page {
     padding: 5rem;
   }
-  
+
+  .error-badge {
+    font-size: 4.5rem;
+  }
+
   .dinamic-cart {
     position: sticky;
     top: 80%;
@@ -161,7 +165,7 @@ main {
     }
   }
 
-  .button-view{
+  .button-view {
     color: rgb(0, 0, 0);
     text-decoration: none;
     text-align: center;
