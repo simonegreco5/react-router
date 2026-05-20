@@ -1,5 +1,6 @@
 // sezione import 
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export default function ProductsPage() {
 
@@ -44,7 +45,7 @@ export default function ProductsPage() {
 
             {/* carrello dinamico in pagina - con z-index */}
             <button className="dinamic-cart">
-                <i class="bi-basket"></i>
+                <i className="bi-basket"></i>
                 <span>{count}</span>
             </button>
 
@@ -86,6 +87,7 @@ export default function ProductsPage() {
                                         <h6>{item.price}$</h6>
                                         <p className="card-text">{item.description}</p>
                                         <button onClick={() => setCount(count + 1)} className="btn btn-primary mt-auto"><i className="bi bi-cart-check"> Add to Cart</i></button>
+                                        <Link to={`/product/${item.id}`} className="button-view"><i className="bi bi-chevron-bar-down"></i> View More</Link>
                                     </div>
                                 </div>
                             </div>

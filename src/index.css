@@ -131,6 +131,10 @@ main {
 
   }
 
+  #product_page{
+    padding: 5rem;
+  }
+  
   .dinamic-cart {
     position: sticky;
     top: 80%;
@@ -155,6 +159,16 @@ main {
       top: -15%;
       left: 65%;
     }
+  }
+
+  .button-view{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.45rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    background-color: rgba(174, 188, 196, 0.544);
   }
 
   .button-home {
