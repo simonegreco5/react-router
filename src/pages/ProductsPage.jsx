@@ -61,35 +61,42 @@ export default function ProductsPage() {
                     <option value="electronics">Electronics</option>
                 </select>
 
+                {/* rendiamo l'intera card cliccabile per vedere in pagina il singolo prodotto */}
+
                 <div className="row g-5-p-5">
+
                     {
                         filteredProduct?.map((item) => (
 
                             // CARD PRODUCT
                             <div className="col-12 col-sm-6 col-md-4 g-5" key={item.id}>
-                                <div className="card shadow h-100" >
+                                <Link to={`/product/${item.id}`} className="text-decoration-none">
 
-                                    {/* BEST SELLER ? */}
-                                    {(item.rating.rate >= 4 && item.rating.count >= 300) && <span className="badge">BestSeller</span>}
+                                    <div className="card shadow h-100" >
 
-                                    {/* IMAGE PRODUCT */}
-                                    <img src={item.image} className="card-img-top" alt="product_image" />
+                                        {/* BEST SELLER ? */}
+                                        {(item.rating.rate >= 4 && item.rating.count >= 300) && <span className="badge">BestSeller</span>}
 
-                                    {/* RATES AND ORDERS */}
-                                    <div className="d-flex">
-                                        <span>{item.rating.rate >= 4 ? <i className="bi bi-star-fill"></i> : <i className="bi bi-star-half"></i>} {item.rating.rate}</span>
-                                        <span><i className="bi bi-basket"></i> {item.rating.count}</span>
+                                        {/* IMAGE PRODUCT */}
+                                        <img src={item.image} className="card-img-top" alt="product_image" />
+
+                                        {/* RATES AND ORDERS */}
+                                        <div className="d-flex">
+                                            <span>{item.rating.rate >= 4 ? <i className="bi bi-star-fill"></i> : <i className="bi bi-star-half"></i>} {item.rating.rate}</span>
+                                            <span><i className="bi bi-basket"></i> {item.rating.count}</span>
+                                        </div>
+
+                                        {/* CARD BODY */}
+                                        <div className="card-body d-flex flex-column">
+                                            <h5 className="card-title">{item.title}</h5>
+                                            <h6>{item.price}$</h6>
+                                            <p className="card-text">{item.description}</p>
+                                            <button onClick={() => setCount(count + 1)} className="btn btn-primary mt-auto"><i className="bi bi-cart-check"> Add to Cart</i></button>
+                                            {/* <Link to={`/product/${item.id}`} className="button-view"><i className="bi bi-chevron-bar-down"></i> View More</Link> */}
+                                        </div>
                                     </div>
 
-                                    {/* CARD BODY */}
-                                    <div className="card-body d-flex flex-column">
-                                        <h5 className="card-title">{item.title}</h5>
-                                        <h6>{item.price}$</h6>
-                                        <p className="card-text">{item.description}</p>
-                                        <button onClick={() => setCount(count + 1)} className="btn btn-primary mt-auto"><i className="bi bi-cart-check"> Add to Cart</i></button>
-                                        <Link to={`/product/${item.id}`} className="button-view"><i className="bi bi-chevron-bar-down"></i> View More</Link>
-                                    </div>
-                                </div>
+                                </Link>
                             </div>
                         ))
                     }
