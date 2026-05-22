@@ -47,7 +47,7 @@ export default function ProductsPage() {
             setFilteredProduct(productsData) // quindi mostriamo i dati originali dell'API (tutti i prodotti)
         }
 
-    }, [filter, productsData, budgetMode]) // aggiungiamo productsData come dipendeza, cosi useEffect si aggiorna anche quando arrivano
+    }, [filter, productsData]) // aggiungiamo productsData come dipendeza, cosi useEffect si aggiorna anche quando arrivano
     // nuovi dati dall'API
 
     // filtro budgetMode, cliccando il button e attivando il budgetMode, mostriamo solo i prodotti con price <= 30, altrimenti li mostriamo tutti
