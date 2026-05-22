@@ -27,7 +27,6 @@ function App() {
     // oppure semplicemente neghiamo lo stato precedente
     // setBudgetMode(prev => !prev)
 
-
   }
 
   return (

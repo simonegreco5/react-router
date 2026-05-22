@@ -1,7 +1,8 @@
 // sezione import 
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import Loader from "../components/Loader"
+import BudgetContext from "../contexts/BudgetContext"
 
 export default function ProductsPage() {
 
@@ -13,6 +14,9 @@ export default function ProductsPage() {
     const [filter, setFilter] = useState("")
     const [count, setCount] = useState(0) // contatore carrello z-index
     const [isDataLoading, setIsDataLoading] = useState(false)
+
+    // recuperiamo budgetMode usando il context 
+    const { budgetMode } = useContext(BudgetContext)
 
     function fetchData(url) {
 
@@ -43,8 +47,20 @@ export default function ProductsPage() {
             setFilteredProduct(productsData) // quindi mostriamo i dati originali dell'API (tutti i prodotti)
         }
 
-    }, [filter, productsData]) // aggiungiamo productsData come dipendeza, cosi il filtro si aggiorna anche quando arrivano
+    }, [filter, productsData, budgetMode]) // aggiungiamo productsData come dipendeza, cosi useEffect si aggiorna anche quando arrivano
     // nuovi dati dall'API
+
+    // filtro budgetMode, cliccando il button e attivando il budgetMode, mostriamo solo i prodotti con price <= 30, altrimenti li mostriamo tutti
+    useEffect(() => {
+        if (budgetMode) {
+            const result = productsData.filter((product) => product.price <= 30)
+
+            setFilteredProduct(result)
+        } else {
+            setFilteredProduct(productsData)
+        }
+    }, [budgetMode])
+
 
     return (
         <>
@@ -77,6 +93,7 @@ export default function ProductsPage() {
                             {
                                 filteredProduct?.map((item) => (
 
+                                    
                                     // CARD PRODUCT
                                     <div className="col-12 col-sm-6 col-md-4 g-5" key={item.id}>
                                         <Link to={`/product/${item.id}`} className="text-decoration-none">
