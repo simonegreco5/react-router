@@ -1,8 +1,12 @@
 // sezione import
 import { NavLink } from "react-router-dom";
 import menu from "../assets/arrayMenu.js";
+import BudgetContext from "../contexts/BudgetContext.jsx";
+import { useContext } from "react";
 
 export default function AppHeader() {
+
+    const { budgetMode, setBudgetMode, toggleBudgetMode } = useContext(BudgetContext)
 
     return (
 
@@ -17,6 +21,9 @@ export default function AppHeader() {
                 </div>
 
                 <ul className="d-flex">
+                    <li><button onClick={toggleBudgetMode} className={budgetMode ? 'active-budget' : ''}>
+                        {`${budgetMode === true ? 'DISATTIVA' : 'ATTIVA'} MODALITÁ BUDGET`}
+                    </button></li>
                     {
                         menu.map((item) => (
                             <li key={item.id}>

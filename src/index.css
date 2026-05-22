@@ -48,10 +48,21 @@ header {
 
     padding-top: 0.9rem;
     padding-right: 1rem;
+    align-items: center;
 
     li {
       padding-left: 2rem;
       list-style: none;
+
+      button{
+        font-weight: 700;
+        border-radius: 0.5rem;
+        color: black;
+      }
+
+      .active-budget{
+        color: green;
+      }
 
       a {
         color: rgba(0, 0, 0, 0.84);

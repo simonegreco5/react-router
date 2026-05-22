@@ -13,10 +13,26 @@ function App() {
 
   const [budgetMode, setBudgetMode] = useState(false)
 
+  function toggleBudgetMode() {
+
+    if (budgetMode === false) {
+      setBudgetMode(true)
+      console.log('modalità budget attivata')
+    
+    } else {
+      setBudgetMode(false)
+      console.log('modalità budget disattivata')
+    }
+
+    // oppure semplicemente neghiamo lo stato precedente
+    // setBudgetMode(prev => !prev)
+
+
+  }
 
   return (
     <>
-      <BudgetContext.Provider value={{ budgetMode, setBudgetMode }}>
+      <BudgetContext.Provider value={{ budgetMode, setBudgetMode, toggleBudgetMode }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>
